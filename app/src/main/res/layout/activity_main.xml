@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:progress="33"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_bar_custom"/>
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Education Details"
+        android:textColor="#222A52"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/labelEducationLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highest Education Level"
+        android:textStyle="bold"
+        android:textColor="#222A52"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="32dp" />
+
+    <Spinner
+        android:id="@+id/educationLevelSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/labelEducationLevel"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/spinner_background" />
+
+    <TextView
+        android:id="@+id/labelInstitution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Institution"
+        android:textStyle="bold"
+        android:textColor="#222A52"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/educationLevelSpinner" />
+
+
+    <Spinner
+        android:id="@+id/institutionSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/educationLevelSpinner"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/spinner_background" />
+
+    <TextView
+        android:layout_below="@+id/institutionSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/100 words typed"
+        android:textSize="12sp"
+        android:textColor="#222A52"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/pastRolesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/institutionSpinner"
+        android:layout_marginTop="40dp"
+        android:hint="Write In 100 Words"
+        android:background="@drawable/edit_text_background"
+        android:gravity="top|start"
+        android:padding="12dp"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:textColor="@color/dark_blue"
+        android:textColorHint="@color/dark_blue"/>
+
+    <TextView
+        android:id="@+id/wordCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/100 words typed"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_alignEnd="@id/pastRolesEditText"
+        android:layout_below="@id/pastRolesEditText"
+        android:layout_marginTop="4dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/wordCountText"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_continue" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Back"
+        android:textColor="#0B0B74"
+        android:layout_below="@id/continueButton"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_outline" />
+
+</RelativeLayout>
